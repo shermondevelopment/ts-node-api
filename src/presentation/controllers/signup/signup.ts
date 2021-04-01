@@ -30,7 +30,7 @@ export class SignUpController implements Controller {
       const addAccount = await this.addAccount.add({ name, email, password })
       return ok(addAccount)
     } catch (err) {
-      return serverError()
+      return serverError(err)
     }
   }
 }
